@@ -45,13 +45,14 @@ p {
 }
 
 .wrapper {
-  width: 100%;
+  max-width: 100vw;
   background-color: #fff;
 }
 
 /*header*/
 header {
   height: 445px;
+  width: 100%;
   position: relative;
   background: linear-gradient(
     to right top,
@@ -72,7 +73,7 @@ header nav {
   z-index: 100;
 }
 
-header nav ul {
+.nav-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -81,18 +82,18 @@ header nav ul {
   justify-content: center;
 }
 
-header nav ul li {
+.nav-list li {
   padding: 2em 1em;
 }
 
-header nav a {
+.nav-list a {
   text-decoration: none;
   text-transform: uppercase;
   color: #582782;
   font-size: 2em;
 }
 
-header nav a:hover {
+.nav-list a:hover {
   color: #fff;
 }
 
@@ -104,29 +105,32 @@ header h4 {
   color: #fff;
 }
 
-.wave-low {
-  max-width: 40%;
-  position: absolute;
-  top: 410px;
-  right: -5px;
-  height: auto;
-}
-
 .wave-top {
   max-width: 30%;
+  height: 100px;
   position: absolute;
-  top: 300px;
+  top: 260px;
   right: 0;
   transform: rotate(180deg);
 }
+
+.wave-low {
+  max-width: 40%;
+  height: 100px;
+  position: absolute;
+  top: 400px;
+  right: 0;
+  height: auto;
+}
+
 /*main*/
 
 .middle {
-  width: 75%;
+  width: 80%;
   margin: 20px auto;
 }
 
-main button {
+.main-button {
   background-color: transparent;
   color: #440c74;
   border: 1px solid #c244c1;
@@ -141,51 +145,48 @@ main button {
   align-items: center;
   position: relative;
   vertical-align: middle;
-}
-
-main img {
-  max-width: 100%;
+  max-width: 409px;
   height: auto;
   margin: auto auto;
 }
 
 /*projects*/
 
-#projects {
+.main-container {
   margin-top: 80px;
   display: flex;
   position: relative;
   align-items: center;
+  justify-content: center;
 }
-
-#projects article {
+.content-column {
   flex-basis: 50%;
 }
 
-#projects h1 {
+.projects h1 {
   color: #e579d7;
 }
 
-#projects h3 {
+.projects h3 {
   color: #5f1b98;
   padding-left: 15%;
   margin: 30px 0;
 }
 
-#projects p {
+.projects p {
   width: 70%;
   margin: 0 auto;
   color: #666699;
   margin-bottom: 20px;
 }
 
-#projects button {
+.right-button {
   margin-left: 15%;
 }
 
 /*team*/
 
-#team {
+.team-section {
   position: relative;
   margin-top: 40px;
   display: flex;
@@ -363,6 +364,11 @@ footer p {
 }
 
 /*media queries*/
+@media screen and (max-width: 1600px) {
+  .wave-low {
+    top: 410px;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .wave-low {
