@@ -1,0 +1,536 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: "Montserrat";
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 247px;
+  line-height: 247px;
+  font-weight: 700;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+h2 {
+  font-size: 116px;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 27px;
+  margin: 0;
+  z-index: 3;
+  position: relative;
+}
+
+h4 {
+  font-size: 21px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+p {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  z-index: 3;
+  position: relative;
+  line-height: 1.5em;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: #fff;
+}
+
+/*header*/
+header {
+  height: 445px;
+  position: relative;
+  background: linear-gradient(
+    to right top,
+    rgb(254, 106, 131),
+    rgb(147, 37, 240)
+  );
+}
+
+header nav {
+  width: 100%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  padding: 2em 1em;
+}
+
+header nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #582782;
+  font-size: 2em;
+}
+
+header nav a:hover {
+  color: #fff;
+}
+
+header h2 {
+  color: #fff;
+}
+
+header h4 {
+  color: #fff;
+}
+
+.wave-low {
+  max-width: 40%;
+  position: absolute;
+  top: 410px;
+  right: -5px;
+  height: auto;
+}
+
+.wave-top {
+  max-width: 30%;
+  position: absolute;
+  top: 300px;
+  right: 0;
+  transform: rotate(180deg);
+}
+/*main*/
+
+.middle {
+  width: 75%;
+  margin: 20px auto;
+}
+
+main button {
+  background-color: transparent;
+  color: #440c74;
+  border: 1px solid #c244c1;
+  font-weight: 700;
+  padding: 1em;
+  z-index: 5;
+  position: relative;
+}
+
+.main-img {
+  flex-basis: 50%;
+  align-items: center;
+  position: relative;
+  vertical-align: middle;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  margin: auto auto;
+}
+
+/*projects*/
+
+#projects {
+  margin-top: 80px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+#projects article {
+  flex-basis: 50%;
+}
+
+#projects h1 {
+  color: #e579d7;
+}
+
+#projects h3 {
+  color: #5f1b98;
+  padding-left: 15%;
+  margin: 30px 0;
+}
+
+#projects p {
+  width: 70%;
+  margin: 0 auto;
+  color: #666699;
+  margin-bottom: 20px;
+}
+
+#projects button {
+  margin-left: 15%;
+}
+
+/*team*/
+
+#team {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+}
+
+#team article {
+  flex-basis: 50%;
+}
+
+#team h1 {
+  color: #fb8097;
+  right: 10%;
+}
+
+#team h3 {
+  color: #5f1b98;
+  margin: 30px 0;
+  padding-left: 20%;
+}
+
+#team p {
+  color: #440c74;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#team button {
+  margin-left: 15%;
+}
+
+/*mission*/
+
+.mission-banner {
+  background: url(wecreate-assets/img/fullbg3.png);
+  height: 100%;
+  height: 400px;
+  position: relative;
+}
+
+#mission h2 {
+  color: #fff;
+  padding-top: 100px;
+}
+/*
+#mission article {
+    padding-top: 40px;
+}*/
+
+.wave-bottom {
+  position: absolute;
+  max-width: 45%;
+  top: 360px;
+  left: -5px;
+}
+
+.mission-container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 60px;
+  position: relative;
+}
+
+#mission h1 {
+  color: #e421b4;
+  top: 70px;
+}
+
+#mission h3 {
+  color: #5f1b98;
+  padding-left: 30%;
+  margin: 40px 0 20px;
+}
+
+#mission article {
+  flex-basis: 60%;
+}
+
+#mission p {
+  color: #440c74;
+  width: 70%;
+  margin: 0 auto 0 25%;
+  margin-bottom: 20px;
+}
+
+#mission button {
+  margin-left: 25%;
+}
+
+/*#mission img {
+  max-width: 409px;
+  height: auto;
+}*/
+
+#contact {
+  margin-top: 50px;
+  height: 445px;
+  background: linear-gradient(
+    to right bottom,
+    rgb(254, 107, 131),
+    rgb(152, 42, 238)
+  );
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#contact h3 {
+  font-size: 63px;
+  font-weight: 700;
+  color: #440c74;
+  margin-top: 40px;
+  text-align: center;
+}
+#contact article {
+  flex-basis: 50%;
+}
+
+#contact footer {
+  flex-basis: 100%;
+}
+
+#contact form {
+  margin-top: 30px;
+}
+
+#contact form label {
+  display: block;
+  color: #440c74;
+  padding: 1em 0;
+}
+
+#contact form input {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid #440c74;
+  width: 60%;
+  margin: 0 auto;
+  outline: none;
+}
+
+#contact form textarea {
+  background: transparent;
+  box-shadow: none;
+  border: 2px solid #440c74;
+  width: 60%;
+  margin: 0 auto;
+  height: 4em;
+  outline: none;
+}
+
+#contact button {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-weight: 700;
+  width: 20%;
+}
+
+#contact button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer {
+  align-self: flex-end;
+}
+
+footer p {
+  color: #54187a;
+  text-transform: uppercase;
+  padding-left: 15%;
+}
+
+/*media queries*/
+
+@media screen and (max-width: 1200px) {
+  .wave-low {
+    max-width: 60%;
+  }
+
+  .wave-top {
+    max-width: 40%;
+  }
+
+  .wave-bottom {
+    max-width: 60%;
+  }
+
+  #projects p,
+  #mission p,
+  #team p {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #team h3 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wave-low {
+    max-width: 80%;
+  }
+
+  .wave-top {
+    max-width: 50%;
+  }
+
+  .wave-bottom {
+    max-width: 80%;
+  }
+
+  #projects {
+    flex-direction: column-reverse;
+  }
+
+  #projects article {
+    position: relative;
+  }
+
+  #team {
+    flex-direction: column;
+  }
+
+  #team article {
+    position: relative;
+  }
+
+  .mission-container {
+    flex-direction: column-reverse;
+  }
+
+  #mission article {
+    position: relative;
+  }
+
+  #contact {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #contact article {
+    flex-basis: 80%;
+    justify-content: center;
+  }
+
+  #contact footer {
+    align-self: unset;
+  }
+
+  #contact form {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  #contact label {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #contact form input,
+  #contact form textarea {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  h2 {
+    font-size: 80px;
+  }
+
+  .wave-low {
+    max-width: 100%;
+  }
+
+  .wave-top {
+    display: none;
+  }
+
+  .wave-bottom {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wave-low {
+    /*display: none;*/
+    width: 100%;
+    top: 420px;
+  }
+
+  .wave-top {
+    display: none;
+  }
+
+  .wave-bottom {
+    display: none;
+  }
+
+  header h2 {
+    line-height: 80px;
+  }
+
+  #projects h1,
+  #mission h1,
+  #team h1 {
+    opacity: 0.5;
+  }
+
+  .burger-header-nav {
+    display: block;
+    height: 40px;
+    width: 100%;
+    background: url(wecreate-assets/img/burg2.png) no-repeat 98% center;
+    cursor: pointer;
+  }
+
+  header nav ul {
+    overflow: hidden;
+    height: 0;
+  }
+
+  header nav ul.open {
+    height: auto;
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    padding: 5px 0;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  header nav ul li a {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  #contact button {
+    width: 30%;
+  }
+}
