@@ -25,7 +25,7 @@ h2 {
 
 h3 {
   font-size: 27px;
-  margin: 0;
+  margin: 1em 0;
   z-index: 3;
   position: relative;
 }
@@ -134,20 +134,11 @@ header h4 {
   background-color: transparent;
   color: #440c74;
   border: 1px solid #c244c1;
+  margin-left: calc(25% / 2);
   font-weight: 700;
   padding: 1em;
   z-index: 5;
   position: relative;
-}
-
-.main-img {
-  flex-basis: 50%;
-  align-items: center;
-  position: relative;
-  vertical-align: middle;
-  max-width: 409px;
-  height: auto;
-  margin: auto auto;
 }
 
 /*projects*/
@@ -155,12 +146,32 @@ header h4 {
 .main-container {
   margin-top: 80px;
   display: flex;
+  flex-direction: column;
   position: relative;
   align-items: center;
   justify-content: center;
+  border: 2px solid pink;
 }
-.content-column {
+
+.main-article {
+  width: 100%;
+  display: flex;
+  border: 2px solid yellow;
+}
+.main-column {
   flex-basis: 50%;
+  border: 2px solid blue;
+}
+
+.main-column img {
+  max-width: 409px;
+  height: auto;
+}
+
+.main-column.main-img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .projects h1 {
@@ -173,9 +184,9 @@ header h4 {
   margin: 30px 0;
 }
 
-.projects p {
-  width: 70%;
-  margin: 0 auto;
+.main-column p {
+  width: 75%;
+  margin: 30px auto;
   color: #666699;
   margin-bottom: 20px;
 }
@@ -192,30 +203,15 @@ header h4 {
   display: flex;
 }
 
-#team article {
-  flex-basis: 50%;
-}
-
-#team h1 {
+.team-section h1 {
   color: #fb8097;
-  right: 10%;
+  opacity: 0.7;
 }
 
-#team h3 {
+.team-section h3 {
   color: #5f1b98;
   margin: 30px 0;
   padding-left: 20%;
-}
-
-#team p {
-  color: #440c74;
-  width: 70%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-#team button {
-  margin-left: 15%;
 }
 
 /*mission*/
@@ -227,14 +223,10 @@ header h4 {
   position: relative;
 }
 
-#mission h2 {
+.mission-section h2 {
   color: #fff;
   padding-top: 100px;
 }
-/*
-#mission article {
-    padding-top: 40px;
-}*/
 
 .wave-bottom {
   position: absolute;
@@ -244,45 +236,33 @@ header h4 {
 }
 
 .mission-container {
-  width: 70%;
   margin: 0 auto;
   display: flex;
   padding-top: 60px;
   position: relative;
 }
 
-#mission h1 {
+.mission-section h1 {
   color: #e421b4;
+  opacity: 0.8;
   top: 70px;
 }
 
-#mission h3 {
+.mission-section h3 {
   color: #5f1b98;
   padding-left: 30%;
   margin: 40px 0 20px;
 }
 
-#mission article {
-  flex-basis: 60%;
-}
-
-#mission p {
+.mission-section p {
   color: #440c74;
-  width: 70%;
-  margin: 0 auto 0 25%;
   margin-bottom: 20px;
+  padding-left: 5%;
 }
 
-#mission button {
-  margin-left: 25%;
-}
+/* Contact */
 
-/*#mission img {
-  max-width: 409px;
-  height: auto;
-}*/
-
-#contact {
+.contact-section {
   margin-top: 50px;
   height: 445px;
   background: linear-gradient(
@@ -295,32 +275,32 @@ header h4 {
   flex-wrap: wrap;
 }
 
-#contact h3 {
+.contact-section h3 {
   font-size: 63px;
   font-weight: 700;
   color: #440c74;
-  margin-top: 40px;
+  margin-top: 80px;
   text-align: center;
 }
-#contact article {
+.contact-section article {
   flex-basis: 50%;
 }
 
-#contact footer {
+.copyrights {
   flex-basis: 100%;
 }
 
-#contact form {
+.contact-section form {
   margin-top: 30px;
 }
 
-#contact form label {
+.contact-section form label {
   display: block;
   color: #440c74;
   padding: 1em 0;
 }
 
-#contact form input {
+.contact-section form input {
   background: transparent;
   box-shadow: none;
   border: none;
@@ -330,7 +310,7 @@ header h4 {
   outline: none;
 }
 
-#contact form textarea {
+.contact-section form textarea {
   background: transparent;
   box-shadow: none;
   border: 2px solid #440c74;
@@ -340,27 +320,30 @@ header h4 {
   outline: none;
 }
 
-#contact button {
+.contact-section button {
   margin-top: 20px;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1.2px solid #fff;
   font-weight: 700;
   width: 20%;
+  padding: 0.5em;
 }
 
-#contact button a {
+.contact-section button a {
   text-decoration: none;
   color: #fff;
 }
 
-footer {
+.copyrights {
+  flex-basis: 100%;
   align-self: flex-end;
 }
 
-footer p {
+.copyrights p {
   color: #54187a;
   text-transform: uppercase;
-  padding-left: 15%;
+  text-align: center;
+  font-size: 1.2em;
 }
 
 /*media queries*/
@@ -385,12 +368,12 @@ footer p {
 
   #projects p,
   #mission p,
-  #team p {
+  .team-section p {
     width: 90%;
     margin: 0 auto;
   }
 
-  #team h3 {
+  .team-section h3 {
     font-size: 24px;
   }
 }
@@ -416,11 +399,11 @@ footer p {
     position: relative;
   }
 
-  #team {
+  .team-section {
     flex-direction: column;
   }
 
-  #team article {
+  .team-section article {
     position: relative;
   }
 
@@ -443,7 +426,7 @@ footer p {
     justify-content: center;
   }
 
-  #contact footer {
+  .copyrights {
     align-self: unset;
   }
 
@@ -503,7 +486,7 @@ footer p {
 
   #projects h1,
   #mission h1,
-  #team h1 {
+  .team-section h1 {
     opacity: 0.5;
   }
 
