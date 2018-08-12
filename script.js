@@ -6,45 +6,38 @@
 
 //hamburger menu
 
-let burger = document.querySelector(".burger-header-nav");
-let menu = document.querySelector(".header nav ul");
+const burger = document.querySelector(".burger-header-nav");
+const h2 = document.querySelector("header h2");
+const menu = document.querySelector(".nav-list");
+const links = menu.querySelectorAll("a");
 burger.addEventListener("click", function() {
   menu.classList.toggle("open");
+  h2.classList.toggle("open");
+  links.forEach(link =>
+    link.addEventListener("click", function() {
+      menu.classList.remove("open");
+    })
+  );
 });
 
-/*jakis tutorial, nie dzialalo za dobrze*/
+/*sticky nav*/
 
-/*window.onscroll = function() {
-  myFunction();
-};
-let navbar = document.getElementById("navbar");
-let sticky = navbar.offsetTop;
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}*/
+// $(document).ready(function() {
+//   let NavY = $(".nav").offset().top;
 
-/*miroslaw zelent */
+//   let stickyNav = function() {
+//     let ScrollY = $(window).scrollTop();
 
-$(document).ready(function() {
-  let NavY = $(".nav").offset().top;
+//     if (ScrollY > NavY) {
+//       $(".nav").addClass("sticky");
+//     } else {
+//       $(".nav").removeClass("sticky");
+//     }
+//   };
 
-  let stickyNav = function() {
-    let ScrollY = $(window).scrollTop();
+//   stickyNav();
 
-    if (ScrollY > NavY) {
-      $(".nav").addClass("sticky");
-    } else {
-      $(".nav").removeClass("sticky");
-    }
-  };
-
-  stickyNav();
-
-  $(window).scroll(function() {
-    stickyNav();
-  });
-});
+//   $(window).scroll(function() {
+//     stickyNav();
+//   });
+// });

@@ -150,35 +150,36 @@ header h4 {
   position: relative;
   align-items: center;
   justify-content: center;
-  border: 2px solid pink;
 }
 
 .main-article {
   width: 100%;
   display: flex;
-  border: 2px solid yellow;
+  border: 2px solid blue;
 }
 .main-column {
   flex-basis: 50%;
-  border: 2px solid blue;
+  border: 2px solid pink;
 }
 
 .main-column img {
   max-width: 409px;
   height: auto;
+  border: 2px solid red;
+  align-self: center;
 }
 
-.main-column.main-img {
+.main-img {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-content: center;
 }
 
-.projects h1 {
+.projects-section h1 {
   color: #e579d7;
 }
 
-.projects h3 {
+.projects-section h3 {
   color: #5f1b98;
   padding-left: 15%;
   margin: 30px 0;
@@ -244,20 +245,23 @@ header h4 {
 
 .mission-section h1 {
   color: #e421b4;
-  opacity: 0.8;
-  top: 70px;
+  opacity: 0.7;
+  top: 110px;
 }
 
 .mission-section h3 {
   color: #5f1b98;
   padding-left: 30%;
-  margin: 40px 0 20px;
+  margin: 80px 0 20px;
 }
 
 .mission-section p {
   color: #440c74;
   margin-bottom: 20px;
   padding-left: 5%;
+}
+.mission-section button {
+  margin-left: 15%;
 }
 
 /* Contact */
@@ -305,7 +309,7 @@ header h4 {
   box-shadow: none;
   border: none;
   border-bottom: 2px solid #440c74;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   outline: none;
 }
@@ -366,8 +370,8 @@ header h4 {
     max-width: 60%;
   }
 
-  #projects p,
-  #mission p,
+  .projects-section p,
+  .mission-section p,
   .team-section p {
     width: 90%;
     margin: 0 auto;
@@ -375,6 +379,12 @@ header h4 {
 
   .team-section h3 {
     font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main-column img {
+    max-width: 350px;
   }
 }
 
@@ -390,58 +400,65 @@ header h4 {
   .wave-bottom {
     max-width: 80%;
   }
-
-  #projects {
-    flex-direction: column-reverse;
-  }
-
-  #projects article {
-    position: relative;
-  }
-
-  .team-section {
+  .main-article {
     flex-direction: column;
+  }
+
+  .main-article > * {
+    order: 9;
+  }
+  .main-img {
+    order: 1;
+  }
+
+  .projects-section article {
+    position: relative;
   }
 
   .team-section article {
     position: relative;
   }
 
-  .mission-container {
-    flex-direction: column-reverse;
-  }
-
-  #mission article {
+  .mission-section article {
     position: relative;
   }
+  .mission-section h3 {
+    margin-top: 20px;
+  }
 
-  #contact {
+  .mission-section button,
+  .main-button {
+    margin: 20px auto 20px 5%;
+  }
+
+  .contact-section {
     height: auto;
     flex-direction: column;
     justify-content: center;
   }
 
-  #contact article {
+  .contact-form {
     flex-basis: 80%;
     justify-content: center;
+    align-content: center;
   }
 
   .copyrights {
     align-self: unset;
   }
 
-  #contact form {
-    width: 80%;
-    margin: 20px auto;
+  .contact-section form {
+    width: 70%;
+    margin: 20px auto 20px 20%;
   }
 
-  #contact label {
+  .contact-section label {
     width: 100%;
     margin: 0 auto;
   }
 
-  #contact form input,
-  #contact form textarea {
+  .contact-section input,
+  .contact-section textarea {
     width: 75%;
     margin: 0 auto;
   }
@@ -484,8 +501,12 @@ header h4 {
     line-height: 80px;
   }
 
+  header h2.open {
+    font-size: 60px;
+  }
+
   #projects h1,
-  #mission h1,
+  .mission-section h1,
   .team-section h1 {
     opacity: 0.5;
   }
@@ -498,28 +519,28 @@ header h4 {
     cursor: pointer;
   }
 
-  header nav ul {
+  .nav-list {
     overflow: hidden;
     height: 0;
   }
 
-  header nav ul.open {
+  .nav-list.open {
     height: auto;
     flex-direction: column;
   }
 
-  header nav ul li {
+  .nav-list li {
     padding: 5px 0;
     width: 70%;
     margin: 0 auto;
   }
 
-  header nav ul li a {
+  .nav-list li a {
     width: 100%;
     display: block;
     text-align: center;
   }
-  #contact button {
+  .contact-section button {
     width: 30%;
   }
 }
